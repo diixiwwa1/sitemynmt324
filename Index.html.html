@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>НМТ Історія України 2026 — Повний курс підготовки</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            
+            /* Period Colors */
+            --period-1: #1e3a8a;
+            --period-2: #92400e;
+            --period-3: #166534;
+            --period-4: #2563eb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Progress Bar */
+        .progress-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem auto;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .progress-bar-container {
+            background: #e2e8f0;
+            height: 12px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--success), #34d399);
+            border-radius: 6px;
+            transition: width 0.5s ease;
+        }
+
+        /* Quick Actions */
+        .quick-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: inherit;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Periods Section */
+        .periods-section {
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--dark);
+        }
+
+        .periods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .period-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-top: 5px solid;
+        }
+
+        .period-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .period-card.period-1 { border-top-color: var(--period-1); }
+        .period-card.period-2 { border-top-color: var(--period-2); }
+        .period-card.period-3 { border-top-color: var(--period-3); }
+        .period-card.period-4 { border-top-color: var(--period-4); }
+
+        .period-header {
+            padding: 1.5rem;
+            color: white;
+            position: relative;
+        }
+
+        .period-1 .period-header { background: var(--period-1); }
+        .period-2 .period-header { background: var(--period-2); }
+        .period-3 .period-header { background: var(--period-3); }
+        .period-4 .period-header { background: var(--period-4); }
+
+        .period-number {
+            font-size: 3rem;
+            font-weight: 700;
+            opacity: 0.2;
+            position: absolute;
+            right: 1rem;
+            top: 0.5rem;
+        }
+
+        .period-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        .period-date {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 0.25rem;
+        }
+
+        .period-content {
+            padding: 1.5rem;
+        }
+
+        .topic-list {
+            list-style: none;
+        }
+
+        .topic-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            transition: all 0.2s;
+        }
+
+        .topic-item:last-child {
+            border-bottom: none;
+        }
+
+        .topic-checkbox {
+            width: 22px;
+            height: 22px;
+            border: 2px solid #cbd5e1;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            flex-shrink: 0;
+            margin-top: 2px;
+            font-size: 14px;
+            color: white;
+        }
+
+        .topic-checkbox.checked {
+            background: var(--success);
+            border-color: var(--success);
+        }
+
+        .topic-text {
+            flex: 1;
+            cursor: pointer;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .topic-text:hover {
+            color: var(--primary);
+        }
+
+        .period-progress {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .period-progress-bar {
+            height: 6px;
+            background: #e2e8f0;
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+
+        .period-progress-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 0.3s;
+        }
+
+        /* Test Section */
+        .test-section {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 4rem 2rem;
+            min-height: 100vh;
+        }
+
+        .test-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .test-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .test-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .test-type-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .badge-single { background: #dbeafe; color: #1e40af; }
+        .badge-match { background: #fef3c7; color: #92400e; }
+        .badge-sequence { background: #d1fae5; color: #065f46; }
+        .badge-multiple { background: #fce7f3; color: #9d174d; }
+
+        .timer {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--danger);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .question-text {
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            font-weight: 500;
+        }
+
+        .options-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .option-item {
+            padding: 1rem 1.25rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .option-item:hover {
+            border-color: var(--primary);
+            background: #f8fafc;
+        }
+
+        .option-item.selected {
+            border-color: var(--primary);
+            background: #eff6ff;
+        }
+
+        .option-item.correct {
+            border-color: var(--success);
+            background: #f0fdf4;
+        }
+
+        .option-item.incorrect {
+            border-color: var(--danger);
+            background: #fef2f2;
+        }
+
+        .option-letter {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .option-item.selected .option-letter {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Sequence Exercise */
+        .sequence-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .sequence-item {
+            padding: 1rem 1.5rem;
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            cursor: move;
+            transition: all 0.2s;
+        }
+
+        .sequence-item:hover {
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .sequence-number {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* Multiple Choice */
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .checkbox-option:hover {
+            border-color: var(--primary);
+        }
+
+        .checkbox-option.selected {
+            border-color: var(--primary);
+            background: #eff6ff;
+        }
+
+        .custom-checkbox {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #cbd5e1;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            flex-shrink: 0;
+            font-size: 14px;
+            color: white;
+        }
+
+        .checkbox-option.selected .custom-checkbox {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
+        /* Results */
+        .results-section {
+            text-align: center;
+            padding: 3rem;
+        }
+
+        .score-circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: conic-gradient(var(--success) calc(var(--score) * 1%), #e2e8f0 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem auto;
+            position: relative;
+        }
+
+        .score-circle::before {
+            content: '';
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .score-text {
+            position: relative;
+            z-index: 1;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        /* Hidden sections */
+        .section-hidden {
+            display: none !important;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.6);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            padding: 2rem;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 700px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .close-btn {
+            background: #f1f5f9;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #64748b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .close-btn:hover {
+            background: #e2e8f0;
+            color: var(--dark);
+        }
+
+        /* Topic Detail */
+        .topic-detail h3 {
+            color: var(--dark);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.25rem;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin: 1.5rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: #f8fafc;
+            border-radius: 12px;
+            margin-left: 1rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.4rem;
+            top: 1.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px var(--primary);
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .personality-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .personality-card {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: #f1f5f9;
+            border-radius: 12px;
+            transition: all 0.2s;
+        }
+
+        .personality-card:hover {
+            background: #e2e8f0;
+            transform: translateX(5px);
+        }
+
+        .personality-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        .term-list {
+            list-style: none;
+        }
+
+        .term-list li {
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+            background: #f8fafc;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .term-list strong {
+            color: var(--primary);
+        }
+
+        .tip-box {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #f0f9ff;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .tip-box strong {
+            color: var(--primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .periods-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .quick-actions { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+            .test-header { flex-direction: column; align-items: flex-start; }
+            .modal-content { padding: 1.5rem; }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="showSection('hero')">
+                <span>📚</span>
+                <span>НМТ Історія 2026</span>
+            </div>
+            <ul class="nav-links">
+                <li><a onclick="showSection('periods')">Теми</a></li>
+                <li><a onclick="startTest('full')">Повний тест</a></li>
+                <li><a onclick="startTest('quick')">Швидкий тест</a></li>
+                <li><a onclick="showProgress()">Мій прогрес</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero-section" class="hero">
+        <div class="hero-content animate-in">
+            <h1>НМТ Історія України 2026</h1>
+            <p class="hero-subtitle">Повний курс підготовки до національного мультипредметного тесту</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">32</span>
+                    <span class="stat-label">теми програми</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">30</span>
+                    <span class="stat-label">тестових завдань</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">54</span>
+                    <span class="stat-label">максимум балів</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">60</span>
+                    <span class="stat-label">хвилин на тест</span>
+                </div>
+            </div>
+
+            <div class="progress-section animate-in">
+                <div class="progress-header">
+                    <span style="font-weight: 600;">Загальний прогрес підготовки</span>
+                    <span id="total-progress-text" style="font-weight: 700; color: var(--primary);">0/32 тем</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="total-progress" style="width: 0%"></div>
+                </div>
+                <p style="margin-top: 0.5rem; color: #64748b; font-size: 0.9rem;">
+                    Вивчено <strong id="completed-count">0</strong> з 32 тем
+                </p>
+            </div>
+
+            <div class="quick-actions">
+                <button class="btn btn-primary" onclick="showSection('periods')">
+                    <span>📖</span> Почати навчання
+                </button>
+                <button class="btn btn-secondary" onclick="startTest('full')">
+                    <span>⏱️</span> Повний тест (60 хв)
+                </button>
+                <button class="btn btn-secondary" onclick="startTest('quick')">
+                    <span>⚡</span> Швидкий тест (15 завд.)
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Periods Section -->
+    <section id="periods-section" class="periods-section section-hidden">
+        <h2 class="section-title">Періоди історії України</h2>
+        <div class="periods-grid" id="periods-container"></div>
+    </section>
+
+    <!-- Test Section -->
+    <section id="test-section" class="test-section section-hidden">
+        <div class="test-container">
+            <div class="test-card" id="test-question-card">
+                <div class="test-header">
+                    <div>
+                        <span class="test-type-badge" id="test-badge">Одна правильна відповідь</span>
+                        <span style="margin-left: 1rem; color: #64748b; font-weight: 500;">
+                            Завдання <span id="current-question">1</span> з <span id="total-questions">30</span>
+                        </span>
+                    </div>
+                    <div class="timer" id="timer">
+                        <span>⏱️</span>
+                        <span id="time-left">60:00</span>
+                    </div>
+                </div>
+
+                <div id="question-container"></div>
+
+                <div style="display: flex; justify-content: space-between; margin-top: 2rem;">
+                    <button class="btn btn-outline" onclick="previousQuestion()" id="prev-btn" style="visibility: hidden;">
+                        ← Попереднє
+                    </button>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="next-btn" style="margin-left: auto;">
+                        Наступне →
+                    </button>
+                </div>
+            </div>
+
+            <div id="results-container" class="test-card section-hidden">
+                <div class="results-section">
+                    <h2 style="font-size: 2rem; margin-bottom: 1rem;">Результати тестування</h2>
+                    <div class="score-circle" id="score-circle" style="--score: 0;">
+                        <div class="score-text" id="score-text">0/54</div>
+                    </div>
+                    <p id="score-message" style="font-size: 1.25rem; margin: 1rem 0; font-weight: 500;"></p>
+                    
+                    <div id="breakdown" style="margin: 2rem 0; text-align: left; background: #f8fafc; padding: 1.5rem; border-radius: 12px;"></div>
+                    
+                    <div class="quick-actions" style="margin-top: 2rem;">
+                        <button class="btn btn-primary" onclick="startTest('full')">
+                            🔄 Спробувати ще раз
+                        </button>
+                        <button class="btn btn-outline" onclick="showSection('periods')">
+                            📚 Повернутися до тем
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic Detail Modal -->
+    <div class="modal-overlay" id="topic-modal" onclick="closeModalOnBackground(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2 id="modal-title">Назва теми</h2>
+                <button class="close-btn" onclick="closeModal()">×</button>
+            </div>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p style="font-size: 1.1rem; font-weight: 600;">© 2026 НМТ Історія України</p>
+        <p style="margin-top: 0.5rem; opacity: 0.8; font-size: 0.9rem;">
+            Підготовка до національного мультипредметного тесту
+        </p>
+    </footer>
+
+    <script>
+        // Data Structure
+        const periods = [
+            {
+                id: 1,
+                title: "Стародавня історія та Київська держава",
+                date: "від найдавніших часів до XIV ст.",
+                color: "#1e3a8a",
+                topics: [
+                    { id: 1, title: "Вступ до історії України", completed: false },
+                    { id: 2, title: "Стародавня історія України", completed: false },
+                    { id: 3, title: "Виникнення та розквіт Русі-України (IX-XIII ст.)", completed: false },
+                    { id: 4, title: "Розвиток культури Русі-України (IX-XIV ст.)", completed: false },
+                    { id: 5, title: "Королівство Руське та Руські землі під владою Литви і Польщі", completed: false },
+                    { id: 6, title: "Кримське ханство та османські володіння в Україні", completed: false }
+                ]
+            },
+            {
+                id: 2,
+                title: "Козацька доба",
+                date: "друга половина XVI – XVIII ст.",
+                color: "#92400e",
+                topics: [
+                    { id: 7, title: "Реформи та повстання в Українських землях Речі Посполитої (друга половина XVI ст.)", completed: false },
+                    { id: 8, title: "Реформи та повстання в Українських землях Речі Посполитої (перша половина XVII ст.)", completed: false },
+                    { id: 9, title: "Національно-визвольна війна середини XVII ст.", completed: false },
+                    { id: 10, title: "Козацька Україна в 50-80-х рр. XVII ст.", completed: false },
+                    { id: 11, title: "Українські землі в кінці XVII – першій половині XVIII ст.", completed: false },
+                    { id: 12, title: "Українські землі в другій половині XVIII ст.", completed: false }
+                ]
+            },
+            {
+                id: 3,
+                title: "XIX століття",
+                date: "від 70-х рр. XVIII ст. до початку XX ст.",
+                color: "#166534",
+                topics: [
+                    { id: 13, title: "Українські землі в Російській та Австрійській імперіях (кінець XVIII – перша половина XIX ст.)", completed: false },
+                    { id: 14, title: "Розвиток культури в Українських землях Російської та Австрійської імперій (кінець XVIII – перша половина XIX ст.)", completed: false },
+                    { id: 15, title: "Українські землі в Російській імперії в другій половині XIX ст.", completed: false },
+                    { id: 16, title: "Українські землі в Австро-Угорській імперії в другій половині XIX ст.", completed: false },
+                    { id: 17, title: "Розвиток культури в Українських землях Російської та Австро-Угорської імперій (друга половина XIX – початок XX ст.)", completed: false },
+                    { id: 18, title: "Українські землі в Російській імперії на початку XX ст. (1900–1914 рр.)", completed: false },
+                    { id: 19, title: "Українські землі в Австро-Угорській імперії на початку XX ст. (1900–1914 рр.)", completed: false },
+                    { id: 20, title: "Український модернізм як культурний феномен", completed: false }
+                ]
+            },
+            {
+                id: 4,
+                title: "XX – початок XXI століття",
+                date: "від 1914 р. до сьогодення",
+                color: "#2563eb",
+                topics: [
+                    { id: 21, title: "Україна в роки Першої світової війни (1914–1918 рр.)", completed: false },
+                    { id: 22, title: "Початок Української революції (лютий – грудень 1917 р.)", completed: false },
+                    { id: 23, title: "Розгортання Української революції та боротьба за відновлення державності (січень – грудень 1918 р.)", completed: false },
+                    { id: 24, title: "Західноукраїнська Народна Республіка. Українська революція (січень – листопад 1919 р.)", completed: false },
+                    { id: 25, title: "Завершення Української революції та боротьба УНР і ЗУНР за об'єднання (грудень 1919 р. – листопад 1921 р.)", completed: false },
+                    { id: 26, title: "Українські землі в міжвоєнний період (1921–1939 рр.)", completed: false },
+                    { id: 27, title: "Україна в роки Другої світової війни (вересень 1939 – вересень 1945 рр.)", completed: false },
+                    { id: 28, title: "Україна в перші повоєнні роки (1945 – початок 1953 рр.)", completed: false },
+                    { id: 29, title: "Україна в умовах десталінізації та застою (1953–1985 рр.)", completed: false },
+                    { id: 30, title: "Україна в період загострення кризи радянської системи та «перебудови» (1985–1991 рр.)", completed: false },
+                    { id: 31, title: "Відновлення незалежності України та становлення нової держави (1991–1996 рр.)", completed: false },
+                    { id: 32, title: "Творення нової України (з 1996 р. до сьогодення)", completed: false }
+                ]
+            }
+        ];
+
+        // Sample Questions Database
+        const questionsDB = [
+            {
+                type: 'single',
+                question: "Який рік вважається датою заснування Києва за літописом «Повість минулих літ»?",
+                options: ["860 р.", "882 р.", "907 р.", "988 р."],
+                correct: 1,
+                explanation: "Згідно з літописом, Київ було засновано в 882 році князем Олегом, який переніс столицю з Новгорода до Києва."
+            },
+            {
+                type: 'single',
+                question: "Хто був автором першої друкованої книги українською мовою «Азбука» 1574 року?",
+                options: ["Іван Федоров", "Петро Могила", "Кирило Ставровецький", "Лаврентій Зизаній"],
+                correct: 0,
+                explanation: "Іван Федоров (Федорович) надрукував «Азбуку» та «Євангеліє учительне» у Львові в 1574 році."
+            },
+            {
+                type: 'single',
+                question: "Яка подія ознаменувала початок Національно-визвольної війни українського народу проти Речі Посполитої?",
+                options: ["Утворення Київської митрополії", "Битва під Жовтими Водами", "Битва під Берестечком", "Зборівська битва"],
+                correct: 1,
+                explanation: "Битва під Жовтими Водами 29 квітня – 16 травня 1648 року стала першою великою перемогою козаків і початком Національно-визвольної війни."
+            },
+            {
+                type: 'single',
+                question: "У якому році було прийнято Конституцію України?",
+                options: ["1991 р.", "1996 р.", "2004 р.", "2014 р."],
+                correct: 1,
+                explanation: "Конституцію України було прийнято 28 червня 1996 року на 5-й сесії Верховної Ради України 2-го скликання."
+            },
+            {
+                type: 'single',
+                question: "Хто очолював Центральну Раду в 1917 році?",
+                options: ["Симон Петлюра", "Михайло Грушевський", "Володимир Винниченко", "Павло Скоропадський"],
+                correct: 1,
+                explanation: "Михайло Грушевський був головою Центральної Ради з березня 1917 року до квітня 1918 року."
+            },
+            {
+                type: 'sequence',
+                question: "Встановіть правильну хронологічну послідовність подій:",
+                items: ["Битва на Синій Воді", "Битва під Ворсклою", "Битва під Грюнвальдом", "Битва під Оршею"],
+                correct: [0, 1, 2, 3],
+                dates: ["1362 р.", "1399 р.", "1410 р.", "1514 р."]
+            },
+            {
+                type: 'multiple',
+                question: "Оберіть три правильні відповіді. Які з перелічених міст були центрами культури в XVI–XVII ст.?",
+                options: ["Київ", "Львів", "Остріг", "Харків", "Одеса", "Дніпро", "Чернігів"],
+                correct: [0, 1, 2],
+                explanation: "Київ (Києво-Могилянська академія), Львів (братства, друкарні), Остріг (Острозька академія) були головними культурними центрами."
+            }
+        ];
+
+        // State Management
+        let currentTest = [];
+        let currentQuestionIndex = 0;
+        let userAnswers = [];
+        let timerInterval;
+        let timeLeft = 3600;
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProgress();
+            renderPeriods();
+            updateProgress();
+        });
+
+        // Render Periods
+        function renderPeriods() {
+            const container = document.getElementById('periods-container');
+            if (!container) return;
+            
+            container.innerHTML = periods.map(period => {
+                const completedTopics = period.topics.filter(t => t.completed).length;
+                const progress = (completedTopics / period.topics.length) * 100;
+                
+                return `
+                    <div class="period-card period-${period.id}">
+                        <div class="period-header">
+                            <div class="period-number">0${period.id}</div>
+                            <div class="period-title">${period.title}</div>
+                            <div class="period-date">${period.date}</div>
+                        </div>
+                        <div class="period-content">
+                            <ul class="topic-list">
+                                ${period.topics.map(topic => `
+                                    <li class="topic-item">
+                                        <div class="topic-checkbox ${topic.completed ? 'checked' : ''}" 
+                                             onclick="toggleTopic(${period.id}, ${topic.id})">
+                                            ${topic.completed ? '✓' : ''}
+                                        </div>
+                                        <div class="topic-text" onclick="openTopicModal(${period.id}, ${topic.id})">
+                                            ${topic.id}. ${topic.title}
+                                        </div>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                            <div class="period-progress">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.875rem;">
+                                    <span>Прогрес</span>
+                                    <span style="font-weight: 600;">${completedTopics}/${period.topics.length}</span>
+                                </div>
+                                <div class="period-progress-bar">
+                                    <div class="period-progress-fill" style="width: ${progress}%; background: ${period.color}"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Toggle Topic Completion
+        function toggleTopic(periodId, topicId) {
+            const period = periods.find(p => p.id === periodId);
+            const topic = period.topics.find(t => t.id === topicId);
+            topic.completed = !topic.completed;
+            
+            renderPeriods();
+            updateProgress();
+            saveProgress();
+        }
+
+        // Update Total Progress
+        function updateProgress() {
+            const totalTopics = periods.reduce((sum, p) => sum + p.topics.length, 0);
+            const completedTopics = periods.reduce((sum, p) => sum + p.topics.filter(t => t.completed).length, 0);
+            const percentage = (completedTopics / totalTopics) * 100;
+            
+            const progressBar = document.getElementById('total-progress');
+            const progressText = document.getElementById('total-progress-text');
+            const completedCount = document.getElementById('completed-count');
+            
+            if (progressBar) progressBar.style.width = percentage + '%';
+            if (progressText) progressText.textContent = `${completedTopics}/${totalTopics} тем`;
+            if (completedCount) completedCount.textContent = completedTopics;
+        }
+
+        // Save Progress
+        function saveProgress() {
+            try {
+                localStorage.setItem('nmt_progress', JSON.stringify(periods));
+            } catch (e) {
+                console.log('LocalStorage not available');
+            }
+        }
+
+        // Load Progress
+        function loadProgress() {
+            try {
+                const saved = localStorage.getItem('nmt_progress');
+                if (saved) {
+                    const savedPeriods = JSON.parse(saved);
+                    periods.forEach((period, i) => {
+                        if (savedPeriods[i] && savedPeriods[i].topics) {
+                            period.topics = savedPeriods[i].topics;
+                        }
+                    });
+                }
+            } catch (e) {
+                console.log('LocalStorage not available');
+            }
+        }
+
+        // Show Section
+        function showSection(section) {
+            const heroSection = document.getElementById('hero-section');
+            const periodsSection = document.getElementById('periods-section');
+            const testSection = document.getElementById('test-section');
+            
+            if (heroSection) heroSection.classList.add('section-hidden');
+            if (periodsSection) periodsSection.classList.add('section-hidden');
+            if (testSection) testSection.classList.add('section-hidden');
+            
+            if (section === 'hero' && heroSection) {
+                heroSection.classList.remove('section-hidden');
+            } else if (section === 'periods' && periodsSection) {
+                periodsSection.classList.remove('section-hidden');
+                renderPeriods();
+            } else if (section === 'test' && testSection) {
+                testSection.classList.remove('section-hidden');
+            }
+            
+            window.scrollTo(0, 0);
+        }
+
+        // Start Test
+        function startTest(type) {
+            showSection('test');
+            
+            // Generate test questions
+            currentTest = generateTest(type);
+            currentQuestionIndex = 0;
+            userAnswers = new Array(currentTest.length).fill(null);
+            
+            // Reset timer
+            timeLeft = type === 'full' ? 3600 : 900;
+            startTimer();
+            
+            // Show first question
+            showQuestion();
+            
+            const resultsContainer = document.getElementById('results-container');
+            const questionCard = document.getElementById('test-question-card');
+            
+            if (resultsContainer) resultsContainer.classList.add('section-hidden');
+            if (questionCard) questionCard.classList.remove('section-hidden');
+        }
+
+        // Generate Test
+        function generateTest(type) {
+            const questions = [];
+            const shuffled = [...questionsDB].sort(() => 0.5 - Math.random());
+            
+            if (type === 'full') {
+                // Full test - 30 questions
+                for (let i = 0; i < 30 && i < shuffled.length; i++) {
+                    questions.push({...shuffled[i % shuffled.length], id: i});
+                }
+            } else {
+                // Quick test - 15 questions
+                for (let i = 0; i < 15 && i < shuffled.length; i++) {
+                    questions.push({...shuffled[i % shuffled.length], id: i});
+                }
+            }
+            
+            return questions;
+        }
+
+        // Show Question
+        function showQuestion() {
+            const question = currentTest[currentQuestionIndex];
+            if (!question) return;
+            
+            const container = document.getElementById('question-container');
+            const currentQ = document.getElementById('current-question');
+            const totalQ = document.getElementById('total-questions');
+            const badge = document.getElementById('test-badge');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            
+            if (currentQ) currentQ.textContent = currentQuestionIndex + 1;
+            if (totalQ) totalQ.textContent = currentTest.length;
+            
+            // Update badge
+            const badges = {
+                single: ['badge-single', 'Одна правильна відповідь'],
+                matching: ['badge-match', 'Встановлення відповідності'],
+                sequence: ['badge-sequence', 'Встановлення послідовності'],
+                multiple: ['badge-multiple', 'Вибір трьох правильних відповідей']
+            };
+            if (badge) {
+                badge.className = 'test-type-badge ' + badges[question.type][0];
+                badge.textContent = badges[question.type][1];
+            }
+            
+            // Render question based on type
+            if (!container) return;
+            
+            if (question.type === 'single') {
+                container.innerHTML = `
+                    <div class="question-text">${question.question}</div>
+                    <div class="options-grid">
+                        ${question.options.map((opt, i) => `
+                            <div class="option-item ${userAnswers[currentQuestionIndex] === i ? 'selected' : ''}" 
+                                 onclick="selectOption(${i})">
+                                <div class="option-letter">${String.fromCharCode(65 + i)}</div>
+                                <span>${opt}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            } else if (question.type === 'sequence') {
+                const currentOrder = userAnswers[currentQuestionIndex] || question.items.map((_, i) => i);
+                container.innerHTML = `
+                    <div class="question-text">${question.question}</div>
+                    <div class="sequence-container" id="sequence-container">
+                        ${currentOrder.map((itemIndex, pos) => `
+                            <div class="sequence-item" onclick="moveSequenceItem(${pos})">
+                                <div class="sequence-number">${pos + 1}</div>
+                                <span>${question.items[itemIndex]}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <p style="color: #64748b; font-size: 0.9rem; margin-top: 1rem;">
+                        💡 Натискайте на події, щоб змінити їх порядок
+                    </p>
+                `;
+                userAnswers[currentQuestionIndex] = currentOrder;
+            } else if (question.type === 'multiple') {
+                const selected = userAnswers[currentQuestionIndex] || [];
+                container.innerHTML = `
+                    <div class="question-text">${question.question}</div>
+                    <div class="options-grid">
+                        ${question.options.map((opt, i) => `
+                            <div class="checkbox-option ${selected.includes(i) ? 'selected' : ''}" 
+                                 onclick="toggleMultiple(${i})">
+                                <div class="custom-checkbox">${selected.includes(i) ? '✓' : ''}</div>
+                                <span>${opt}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <p style="color: #64748b; font-size: 0.9rem; margin-top: 1rem;">
+                        Обрано: ${selected.length} з 3 можливих
+                    </p>
+                `;
+            }
+            
+            // Update navigation buttons
+            if (prevBtn) prevBtn.style.visibility = currentQuestionIndex > 0 ? 'visible' : 'hidden';
+            if (nextBtn) nextBtn.textContent = currentQuestionIndex === currentTest.length - 1 ? 'Завершити тест ✓' : 'Наступне →';
+        }
+
+        // Select Option (Single Choice)
+        function selectOption(index) {
+            userAnswers[currentQuestionIndex] = index;
+            showQuestion();
+        }
+
+        // Toggle Multiple Choice
+        function toggleMultiple(index) {
+            let selected = userAnswers[currentQuestionIndex] || [];
+            if (selected.includes(index)) {
+                selected = selected.filter(i => i !== index);
+            } else if (selected.length < 3) {
+                selected.push(index);
+            }
+            userAnswers[currentQuestionIndex] = selected;
+            showQuestion();
+        }
+
+        // Move Sequence Item (simple swap for demo)
+        function moveSequenceItem(position) {
+            const answer = userAnswers[currentQuestionIndex];
+            if (position < answer.length - 1) {
+                // Swap with next item
+                [answer[position], answer[position + 1]] = [answer[position + 1], answer[position]];
+                userAnswers[currentQuestionIndex] = answer;
+                showQuestion();
+            } else {
+                // If last item, move to first
+                const item = answer.pop();
+                answer.unshift(item);
+                userAnswers[currentQuestionIndex] = answer;
+                showQuestion();
+            }
+        }
+
+        // Navigation
+        function nextQuestion() {
+            if (currentQuestionIndex < currentTest.length - 1) {
+                currentQuestionIndex++;
+                showQuestion();
+            } else {
+                finishTest();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                showQuestion();
+            }
+        }
+
+        // Timer
+        function startTimer() {
+            clearInterval(timerInterval);
+            updateTimerDisplay();
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+                if (timeLeft <= 0) {
+                    finishTest();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const timerDisplay = document.getElementById('time-left');
+            if (timerDisplay) {
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                
+                if (timeLeft < 300) { // Less than 5 minutes
+                    timerDisplay.style.color = 'var(--danger)';
+                }
+            }
+        }
+
+        // Finish Test
+        function finishTest() {
+            clearInterval(timerInterval);
+            
+            let score = 0;
+            let maxScore = currentTest.length;
+            let correctCount = 0;
+            
+            currentTest.forEach((q, i) => {
+                const answer = userAnswers[i];
+                if (q.type === 'single') {
+                    if (answer === q.correct) {
+                        score += 1;
+                        correctCount++;
+                    }
+                } else if (q.type === 'sequence') {
+                    // Check if sequence is correct
+                    const isCorrect = answer && answer.every((val, idx) => val === q.correct[idx]);
+                    if (isCorrect) {
+                        score += 1;
+                        correctCount++;
+                    }
+                } else if (q.type === 'multiple') {
+                    if (answer && answer.length === 3) {
+                        const correct = answer.filter(a => q.correct.includes(a)).length;
+                        if (correct === 3) {
+                            score += 1;
+                            correctCount++;
+                        }
+                    }
+                }
+            });
+            
+            // Show results
+            const questionCard = document.getElementById('test-question-card');
+            const resultsContainer = document.getElementById('results-container');
+            
+            if (questionCard) questionCard.classList.add('section-hidden');
+            if (resultsContainer) resultsContainer.classList.remove('section-hidden');
+            
+            const percentage = (score / maxScore) * 100;
+            const scoreCircle = document.getElementById('score-circle');
+            const scoreText = document.getElementById('score-text');
+            const scoreMessage = document.getElementById('score-message');
+            const breakdown = document.getElementById('breakdown');
+            
+            if (scoreCircle) scoreCircle.style.setProperty('--score', percentage);
+            if (scoreText) scoreText.textContent = `${Math.round(score)}/${maxScore}`;
+            
+            let message = '';
+            let color = '';
+            if (percentage >= 90) {
+                message = '🎉 Відмінно! Ви чудово підготовлені до НМТ!';
+                color = 'var(--success)';
+            } else if (percentage >= 70) {
+                message = '👍 Добре! Але ще є над чим працювати.';
+                color = '#f59e0b';
+            } else if (percentage >= 50) {
+                message = '📚 Задовільно. Рекомендуємо повторити матеріал.';
+                color = '#f97316';
+            } else {
+                message = '💪 Потрібна додаткова підготовка. Не здавайтеся!';
+                color = 'var(--danger)';
+            }
+            
+            if (scoreMessage) {
+                scoreMessage.textContent = message;
+                scoreMessage.style.color = color;
+            }
+            
+            if (breakdown) {
+                breakdown.innerHTML = `
+                    <h3 style="margin-bottom: 1rem;">Детальний розбір:</h3>
+                    <div style="display: grid; gap: 0.5rem;">
+                        <div style="display: flex; justify-content: space-between; padding: 0.75rem; background: white; border-radius: 8px;">
+                            <span>Правильних відповідей:</span>
+                            <strong style="color: var(--success);">${correctCount} з ${maxScore}</strong>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 0.75rem; background: white; border-radius: 8px;">
+                            <span>Відсоток виконання:</span>
+                            <strong>${Math.round(percentage)}%</strong>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 0.75rem; background: white; border-radius: 8px;">
+                            <span>Залишилося часу:</span>
+                            <strong>${Math.floor(timeLeft / 60)} хв ${timeLeft % 60} сек</strong>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // Modal Functions
+        function openTopicModal(periodId, topicId) {
+            const period = periods.find(p => p.id === periodId);
+            const topic = period.topics.find(t => t.id === topicId);
+            
+            const modalTitle = document.getElementById('modal-title');
+            const modalBody = document.getElementById('modal-body');
+            
+            if (modalTitle) modalTitle.textContent = topic.title;
+            
+            // Generate content based on topic ID
+            const content = generateTopicContent(topic.id);
+            if (modalBody) modalBody.innerHTML = content;
+            
+            const modal = document.getElementById('topic-modal');
+            if (modal) modal.classList.add('active');
+        }
+
+        function generateTopicContent(topicId) {
+            // Sample content for different topics
+            const contents = {
+                1: {
+                    dates: [
+                        {year: "До нашої ери", event: "Заселення території України давніми людьми"},
+                        {year: "VII-VI ст. до н.е.", event: "Заснування грецьких колоній на Північному Причорномор'ї"},
+                        {year: "III ст. до н.е. - III ст. н.е.", event: "Розквіт скіфського царства"}
+                    ],
+                    personalities: [
+                        {name: "Геродот", initials: "ГЕ", desc: "«Батько історії», описав Скіфію"},
+                        {name: "Антей", initials: "АН", desc: "Міфологічний персонаж, син Посейдона"}
+                    ],
+                    terms: [
+                        {term: "Трипільська культура", def: "археологічна культура енеоліту-бронзового віку (5500-2750 рр. до н.е.)"},
+                        {term: "Кіммерійці", def: "давній народ, що мешкав у Північному Причорномор'ї"},
+                        {term: "Скіфи", def: "кочовий народ, що створив могутнє царство"}
+                    ]
+                },
+                3: {
+                    dates: [
+                        {year: "882 р.", event: "Заснування Київської Русі князем Олегом"},
+                        {year: "988 р.", event: "Хрещення Русі князем Володимиром"},
+                        {year: "1037 р.", event: "Заснування Софіївського собору в Києві"},
+                        {year: "1054 р.", event: "Смерть Ярослава Мудрого, початок феодальної роздробленості"}
+                    ],
+                    personalities: [
+                        {name: "Володимир Великий", initials: "ВВ", desc: "князь (980-1015), хреститель Русі"},
+                        {name: "Ярослав Мудрий", initials: "ЯМ", desc: "князь (1019-1054), автор «Руської Правди»"},
+                        {name: "Ольга", initials: "ОЛ", desc: "княгиня (945-962), перша християнка на Русі"}
+                    ],
+                    terms: [
+                        {term: "Київська Русь", def: "середньовічна держава Східної Європи IX-XIII ст."},
+                        {term: "Варяги", def: "скандинавські воїни та купці"},
+                        {term: "Полюддя", def: "збирання данини князем з підлеглих земель"},
+                        {term: "Уроки", def: "слов'янські племена, що сплачували данину"}
+                    ]
+                },
+                9: {
+                    dates: [
+                        {year: "1648", event: "Битва під Жовтими Водами - початок Національно-визвольної війни"},
+                        {year: "1648", event: "Битва під Корсунем"},
+                        {year: "1649", event: "Зборівська битва, Зборівський договір"},
+                        {year: "1651", event: "Битва під Берестечком"}
+                    ],
+                    personalities: [
+                        {name: "Богдан Хмельницький", initials: "БХ", desc: "Гетьман Війська Запорозького, керівник Національно-визвольної війни"},
+                        {name: "Іван Богун", initials: "ІБ", desc: "полковник, герой битви під Берестечком"},
+                        {name: "Тугай-бей", initials: "ТБ", desc: "кримськотатарський воєвода, союзник Хмельницького"}
+                    ],
+                    terms: [
+                        {term: "Національно-визвольна війна", def: "визвольна війна українського народу проти Речі Посполитої 1648-1676 рр."},
+                        {term: "Реєстрові козаки", def: "козаки, внесені до реєстру і що отримували платню"},
+                        {term: "Нереєстрові козаки", def: "козаки, що не були внесені до реєстру"}
+                    ]
+                }
+            };
+            
+            const data = contents[topicId] || contents[3]; // Default to topic 3 if not found
+            
+            return `
+                <div class="topic-detail">
+                    <h3>📅 Ключові дати та події</h3>
+                    <div class="timeline">
+                        ${data.dates.map(d => `
+                            <div class="timeline-item">
+                                <div class="timeline-date">${d.year}</div>
+                                <p>${d.event}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                    
+                    <h3>👥 Видатні постаті</h3>
+                    <div class="personality-grid">
+                        ${data.personalities.map(p => `
+                            <div class="personality-card">
+                                <div class="personality-avatar">${p.initials}</div>
+                                <div>
+                                    <div style="font-weight: 600;">${p.name}</div>
+                                    <div style="font-size: 0.875rem; color: #64748b;">${p.desc}</div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                    
+                    <h3>📖 Ключові терміни</h3>
+                    <ul class="term-list">
+                        ${data.terms.map(t => `
+                            <li>
+                                <strong>${t.term}</strong> — ${t.def}
+                            </li>
+                        `).join('')}
+                    </ul>
+                    
+                    <div class="tip-box">
+                        <strong>💡 Пам'ятайте для НМТ:</strong><br>
+                        Звертайте увагу на дати правління князів, ключові битви та культурні досягнення. 
+                        На НМТ часто запитують про хронологічну послідовність подій та відповідність діячів їхнім досягненням.
+                    </div>
+                </div>
+            `;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('topic-modal');
+            if (modal) modal.classList.remove('active');
+        }
+
+        function closeModalOnBackground(event) {
+            if (event.target === event.currentTarget) {
+                closeModal();
+            }
+        }
+
+        // Show Progress Details
+        function showProgress() {
+            const completed = periods.reduce((sum, p) => sum + p.topics.filter(t => t.completed).length, 0);
+            const total = periods.reduce((sum, p) => sum + p.topics.length, 0);
+            
+            alert(`📊 Ваш прогрес підготовки до НМТ:\n\n✅ Вивчено тем: ${completed} з ${total}\n📈 Відсоток готовності: ${Math.round((completed/total)*100)}%\n\n${completed < total ? '💪 Продовжуйте вивчення невивчених тем!' : '🎉 Вітаємо! Ви вивчили всі теми!'}`);
+        }
+    </script>
+</body>
+</html>
